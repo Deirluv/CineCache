@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_previous"
+        android:contentDescription="Back"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <TextView
+        android:id="@+id/no_saved_movies_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There are no saved films yet."
+        android:textSize="18sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="16dp"/>
+
+    <ListView
+        android:id="@+id/saved_movies_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>
