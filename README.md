@@ -1,0 +1,1 @@
+CineCache is an Android application for searching movies and TV series using TMDb API. It allows to quickly find movie information and save movies and TV series locally in SQLite for offline access and convenient viewing
