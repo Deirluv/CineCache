@@ -4,32 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#333446">
 
     <EditText
         android:id="@+id/query_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Film name" />
+        android:hint="Film name"
+        android:backgroundTint="#7F8CAA"
+        android:textColor="#EAEFEF"
+        android:hintTextColor="#B8CFCE"
+        android:padding="10dp" />
 
     <EditText
         android:id="@+id/year_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Year"
-        android:inputType="number" />
+        android:inputType="number"
+        android:backgroundTint="#7F8CAA"
+        android:textColor="#EAEFEF"
+        android:hintTextColor="#B8CFCE"
+        android:padding="10dp" />
 
     <CheckBox
         android:id="@+id/include_adult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show 18+ films" />
+        android:text="Show 18+ films"
+        android:textColor="#EAEFEF"
+        android:buttonTint="#B8CFCE" />
 
     <Button
         android:id="@+id/search_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search" />
+        android:text="Search"
+        android:backgroundTint="#7F8CAA"
+        android:textColor="#EAEFEF"
+        android:padding="12dp" />
 
     <ImageButton
         android:id="@+id/saved_button"
@@ -37,13 +51,20 @@
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_menu_save"
         android:contentDescription="Saved Films"
-        android:layout_gravity="end" />
+        android:background="@drawable/imagebutton_border"
+        android:layout_gravity="end"
+        android:padding="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp" />
+
 
     <ListView
         android:id="@+id/result_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp" />
+        android:divider="#B8CFCE"
+        android:dividerHeight="1dp"
+        android:background="#EAEFEF"
+        android:padding="8dp" />
 </LinearLayout>

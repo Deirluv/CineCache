@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#333446">
 
     <ImageButton
         android:id="@+id/back_button"
@@ -12,7 +13,8 @@
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_media_previous"
         android:contentDescription="Back"
-        android:background="?attr/selectableItemBackgroundBorderless" />
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginBottom="16dp" />
 
     <TextView
         android:id="@+id/no_saved_movies_text"
@@ -20,16 +22,23 @@
         android:layout_height="wrap_content"
         android:text="There are no saved films yet."
         android:textSize="18sp"
+        android:textColor="#EAEFEF"
         android:gravity="center"
         android:visibility="gone"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        android:background="#7F8CAA"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#7F8CAA" />
 
     <ListView
         android:id="@+id/saved_movies_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp" />
+        android:divider="#B8CFCE"
+        android:dividerHeight="1dp"
+        android:background="#EAEFEF"
+        android:padding="8dp" />
 
 </LinearLayout>

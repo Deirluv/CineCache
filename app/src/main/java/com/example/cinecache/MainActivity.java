@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private MovieListAdapter adapter;
     private List<Movie> movies = new ArrayList<>();
 
-    private String API_KEY = "fegrehrthrthrthtrhr";
+    private String API_KEY = "ergergergergerg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
