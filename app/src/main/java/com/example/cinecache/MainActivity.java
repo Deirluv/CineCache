@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private MovieListAdapter adapter;
     private List<Movie> movies = new ArrayList<>();
 
-    private String API_KEY = "rwegergergreg";
+    private String API_KEY = "dddddddddd";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
 
         new Thread(() -> {
             try {
-                resultList.setVisibility(View.VISIBLE);
                 List<Movie> newMovies = apiClient.searchMovies(new SearchParams(query, year, include));
 
                 runOnUiThread(() -> {
+                    resultList.setVisibility(View.VISIBLE);
                     movies.clear();
                     movies.addAll(newMovies);
 
