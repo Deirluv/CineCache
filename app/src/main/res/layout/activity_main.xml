@@ -14,7 +14,7 @@
         android:hint="Film name"
         android:backgroundTint="#7F8CAA"
         android:textColor="#EAEFEF"
-        android:hintTextColor="#B8CFCE"
+        android:textColorHint="#B8CFCE"
         android:padding="10dp" />
 
     <EditText
@@ -25,7 +25,7 @@
         android:inputType="number"
         android:backgroundTint="#7F8CAA"
         android:textColor="#EAEFEF"
-        android:hintTextColor="#B8CFCE"
+        android:textColorHint="#B8CFCE"
         android:padding="10dp" />
 
     <CheckBox
@@ -49,7 +49,7 @@
         android:id="@+id/saved_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_save"
+        android:src="@drawable/bookmark_icon"
         android:contentDescription="Saved Films"
         android:background="@drawable/imagebutton_border"
         android:layout_gravity="end"
@@ -66,5 +66,6 @@
         android:divider="#B8CFCE"
         android:dividerHeight="1dp"
         android:background="#EAEFEF"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:visibility="gone"/>
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.cinecache;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private MovieListAdapter adapter;
     private List<Movie> movies = new ArrayList<>();
 
-    private String API_KEY = "ergergergergerg";
+    private String API_KEY = "rwegergergreg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,8 +75,14 @@ public class MainActivity extends AppCompatActivity {
         Integer year = yearInput.getText().toString().isEmpty() ? null : Integer.parseInt(yearInput.getText().toString());
         boolean include = includeAdult.isChecked();
 
+        if (query.isEmpty() && year == null && !include) {
+            Toast.makeText(this, "Please enter a search query, year or check 'Show 18+ films'", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         new Thread(() -> {
             try {
+                resultList.setVisibility(View.VISIBLE);
                 List<Movie> newMovies = apiClient.searchMovies(new SearchParams(query, year, include));
 
                 runOnUiThread(() -> {
